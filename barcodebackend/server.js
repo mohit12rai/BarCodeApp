@@ -1831,6 +1831,10 @@ app.put('/settings/barcode-range', authenticateToken, checkRole(['admin', 'super
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('BarCode Backend is running');
+});
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
